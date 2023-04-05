@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>--Versatile_api--</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                    <div class="flex-grow-1 bg-login-image" style="background-image: url(&quot;assets/logo/TNM.jpg&quot;);margin-bottom: 240px;margin-top: 260px;"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h3 class="text-dark mb-4">Welcome to TNM_Versatile_api by SRK!</h4>
+                                        <marquee class="text-dark mb-4" width="90%" direction="up" height="110px" scrollamount="1">
+                                            ---V4.2.0--- <br>
+                                            Warning: Exel log file sholud be in .xlsx format and without any space in middle :/ <br>
+                                            It should contains two colunm named "ID" and "Data" for those two specific column :/ <br>
+                                            It should has just one sheet of log <br>
+                                            If you enter txt file, it should be UTF8 format :) <br>
+
+                                            ^^^ Good Luck ^^^
+                                        </marquee>
+                                    </div>
+                                    <form class="user" method="POST" action="/run" enctype = "multipart/form-data">
+                                        <div class="form-group"><input class="form-control form-control-user" type="text" id="exampleInputPick" aria-describedby="txtHelp" placeholder="first_Key , second_Key" name="firstCode"></div>
+                                        <div class="form-group"><input class="form-control form-control-user" type="text" id="exampleInputDis" placeholder="Rate without K" name="secondCode"></div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1" name="check"><label class="form-check-label custom-control-label" for="formCheck-1">Time remover</label></div>
+                                            </div>
+
+                                        </div>
+                                        <input class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button" type = "file" name = "file"  accept=".xlsx,.txt" style="background: rgb(61,152,59);" >
+                                        <input type="submit" class="btn btn-primary btn-block text-white btn-user" role="button" value="run">
+                                        <div class="progress" style="margin: -10px;margin-top: 12px;">
+                                            <div class="progress-bar progress-bar-animated" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;">{{percent}}%</div>
+                                        </div>
+                                        <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button" href="{{ url_for('.download_file') }}"><i class="fa fa-download" style="font-size: 18px;"></i>&nbsp;Download Emulator</a>
+                                        <hr>
+                                    </form>
+                                    <div class="text-center"></div>
+                                    <marquee style='width: 80%; color: blue;' scrollamount="4"><b>
+                                        <div class="text-center"><a class="big" href="http://www.tnmelectronics.ir/"><i class="fas fa-dove" style="font-size: 18px;"></i>help</a></div></b>
+                                    </marquee>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
